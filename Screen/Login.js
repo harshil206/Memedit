@@ -26,6 +26,11 @@ const Login = props => {
         </View>
         <Appbutton style={styles.loginbutt}>Login</Appbutton>
         <TouchableOpacity><Text style={{ fontSize: 15, paddingTop: '4%', fontWeight: 'bold' }}>Forgot Password ??</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
+          <Text style={{ fontSize: 15, paddingTop: '4%', fontWeight: 'bold' }}>
+            Create account....
+          </Text>
+        </TouchableOpacity>
       </Card>
     </View>
   );

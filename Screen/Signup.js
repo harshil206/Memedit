@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Signup = props => {
   return (
-    <View></View>
+    <View><Text>hello</Text></View>
   );
 }
 
