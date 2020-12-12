@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from 'react-native';
-import { } from 'react-native-gesture-handler';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 
 
@@ -10,7 +9,6 @@ import Appbutton from '../Components/Appbutton';
 const Login = props => {
   return (
     <View style={styles.container}>
-
       <Card style={styles.card}>
         <View style={styles.headertext}>
           <Text style={styles.text}>LOGIN</Text>
@@ -25,7 +23,16 @@ const Login = props => {
           <TextInput style={styles.texteditor_style} secureTextEntry={true}></TextInput>
         </View>
         <Appbutton style={styles.loginbutt}>Login</Appbutton>
-        <TouchableOpacity><Text style={{ fontSize: 15, paddingTop: '4%', fontWeight: 'bold' }}>Forgot Password ??</Text></TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={{ fontSize: 15, paddingTop: '4%', fontWeight: 'bold' }}>
+            Forgot Password ??
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => props.navigation.navigate('Signup')}>
+          <Text style={{ fontSize: 15, paddingTop: '4%', fontWeight: 'bold' }}>
+            Create account....
+          </Text>
+        </TouchableOpacity>
       </Card>
     </View>
   );
@@ -56,6 +63,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 30,
+    fontWeight: 'bold',
   },
   headertext: {
     flexDirection: 'row',

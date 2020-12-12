@@ -9,8 +9,8 @@ const Homepage = props => {
       <Text style={styles.mainText}>memEdit</Text>
       <Text>Logo</Text>
       <View style={styles.buttoncont}>
-        <AppButton onPress={() => { props.onClick() }}>LOGIN</AppButton>
-        <AppButton>SIGNUP</AppButton>
+        <AppButton onPress={() => { props.navigation.replace('Login') }}>LOGIN</AppButton>
+        <AppButton onPress={() => { props.navigation.replace('Signup') }}>SIGNUP</AppButton>
       </View>
     </View>
   );
